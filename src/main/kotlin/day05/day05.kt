@@ -17,7 +17,7 @@ fun readFileLineByLine(fileName: String)
 }
 
 
-fun gridToString(grid: Array<Array<Int>>): String {
+fun gridToString(grid: Array<Array<Int>>, separator: String = "\t"): String {
     var output: String = ""
     for ((i, line) in grid.withIndex()) {
         val lineString: MutableList<String> = MutableList(0) { "" }
@@ -25,7 +25,7 @@ fun gridToString(grid: Array<Array<Int>>): String {
             lineString.add(number.toString());
         }
 
-        output += lineString.joinToString("\t") + "\n"
+        output += lineString.joinToString(separator) + "\n"
     }
     return output
 }
