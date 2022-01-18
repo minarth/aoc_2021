@@ -1,6 +1,7 @@
 package day04
 
 import java.io.File
+import dataDir
 
 fun readFileLineByLine(fileName: String)
         = File(fileName).readLines()
@@ -120,7 +121,7 @@ fun partTwo(calledNums: List<Int>, boards: List<Board>): Int {
 }
 
 fun main() {
-    val trainInput = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day04/test.txt")
+    val trainInput = readFileLineByLine("$dataDir/day04/test.txt")
     val calledNums = trainInput[0].split(",".toRegex()).map { it.toInt() }
     val boards = parseBoards(trainInput)
 
@@ -129,7 +130,7 @@ fun main() {
     print("Test two ")
     println(partTwo(calledNums, boards))
 
-    val testInput = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day04/input.txt")
+    val testInput = readFileLineByLine("$dataDir/day04/input.txt")
     val calledTestNums = testInput[0].split(",".toRegex()).map { it.toInt() }
     val testBoards = parseBoards(testInput)
 

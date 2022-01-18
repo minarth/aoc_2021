@@ -1,5 +1,6 @@
 package day25
 
+import dataDir
 import java.io.File
 
 /**
@@ -90,9 +91,9 @@ fun partOne(grid: Array<Array<Char>>): Int {
 }
 
 fun main() {
-    var grid = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day25/example.txt").readLines())
+    var grid = parse(File("$dataDir//day25/example.txt").readLines())
     println("Example part one ${partOne(grid)}")
 
-    grid = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day25/input.txt").readLines())
+    grid = parse(File("$dataDir//day25/input.txt").readLines())
     println("Part one ${partOne(grid)}")
 }

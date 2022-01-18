@@ -1,6 +1,7 @@
 package day12
 
 import java.io.File
+import dataDir
 
 data class Path(val path: String, val smallCavern: Boolean)
 
@@ -75,25 +76,25 @@ fun breadthSearchAdvanced(graph: Map<String, MutableList<String>>): Int {
 }
 
 fun main() {
-    var exampleGraph = createGraph(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day12/example0.txt").readLines())
+    var exampleGraph = createGraph(File("$dataDir/day12/example0.txt").readLines())
     print("Example one part one ")
     println(breadthSearch(exampleGraph))
     print("Example one part two ")
     println(breadthSearchAdvanced(exampleGraph))
 
-    exampleGraph = createGraph(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day12/example1.txt").readLines())
+    exampleGraph = createGraph(File("$dataDir/day12/example1.txt").readLines())
     print("Example two part one ")
     println(breadthSearch(exampleGraph))
     print("Example two part two ")
     println(breadthSearchAdvanced(exampleGraph))
 
-    exampleGraph = createGraph(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day12/example2.txt").readLines())
+    exampleGraph = createGraph(File("$dataDir/day12/example2.txt").readLines())
     print("Example three part one ")
     println(breadthSearch(exampleGraph))
     print("Example three part two ")
     println(breadthSearchAdvanced(exampleGraph))
 
-    val inputGraph = createGraph(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day12/input.txt").readLines())
+    val inputGraph = createGraph(File("$dataDir/day12/input.txt").readLines())
     print("Part one ")
     println(breadthSearch(inputGraph))
     print("Part two ")

@@ -3,6 +3,7 @@ package day05
 import java.io.File
 import java.lang.Integer.max
 import java.lang.Integer.min
+import dataDir
 
 data class Vent(val startX: Int, val startY: Int, val endX: Int, val endY: Int)
 
@@ -81,14 +82,14 @@ fun part(grid: Array<Array<Int>>): Int {
 }
 
 fun main() {
-    val vents = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day05/test.txt")
+    val vents = readFileLineByLine("$dataDir/day05/test.txt")
     val grid = createGrid(vents)
     print("Test example ")
     println(part(grid))
     print("Test example part two ")
     println(part(createGrid(vents, true)))
 
-    val testVents = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day05/input.txt")
+    val testVents = readFileLineByLine("$dataDir/day05/input.txt")
     val testGrid = createGrid(testVents)
     print("Part one ")
     println(part(testGrid))

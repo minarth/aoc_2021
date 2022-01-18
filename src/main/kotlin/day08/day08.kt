@@ -1,6 +1,7 @@
 package day08
 
 import java.io.File
+import dataDir
 
 data class Input(val signals: List<String>, val outputs: List<String>)
 
@@ -126,14 +127,14 @@ fun partTwo(data: List<Input>): Int {
 }
 
 fun main() {
-    val trainData = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day08/test.txt")
+    val trainData = readFileLineByLine("$dataDir/day08/test.txt")
     print("Test part one ")
     println(partOne(trainData))
 
     print("Test part two ")
     println(partTwo(trainData))
 
-    val testData = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day08/input.txt")
+    val testData = readFileLineByLine("$dataDir/day08/input.txt")
     print("Part one ")
     println(partOne(testData))
 

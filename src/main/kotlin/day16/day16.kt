@@ -3,6 +3,7 @@ package day16
 import java.io.File
 import java.util.Collections.max
 import java.util.Collections.min
+import dataDir
 
 data class Packet(val version: Int, val typeId: Int,
                   var packets: MutableList<Packet> = mutableListOf(),  // for Ops packets
@@ -163,16 +164,16 @@ fun main() {
     println(partOne(readPacket(hex2bin("C0015000016115A2E0802F182340"))))
     println(partOne(readPacket(hex2bin("A0016C880162017C3686B18A3D4780"))))
 
-    val testInput = File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day16/input.txt").readLines()[0]
+    val testInput = File("$dataDir/day16/input.txt").readLines()[0]
     println("Part one ${partOne(readPacket(hex2bin(testInput)))}")
 
 
     println("Examples for part two")
     val examples = listOf("C200B40A82", "04005AC33890", "880086C3E88112", "CE00C43D881120", "D8005AC2A8F0",
         "F600BC2D8F", "9C005AC2F8F0", "9C0141080250320F1802104A08")
-    for (ex in examples) {
-        println(partTwo(readPacket(hex2bin(ex))))
-    }
+    //for (ex in examples) {
+    //    println(partTwo(readPacket(hex2bin(ex))))
+    //}
 
     println("Part two ${partTwo(readPacket(hex2bin(testInput)))}")
 

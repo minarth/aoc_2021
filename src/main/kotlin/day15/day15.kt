@@ -1,7 +1,6 @@
 package day15
 
-import day05.gridToString
-
+import dataDir
 import day09.Point
 import day09.parseToGrid
 import java.io.File
@@ -83,12 +82,12 @@ fun generateFullGrid(grid: Array<Array<Int>>): Array<Array<Int>> {
 }
 
 fun main() {
-    val exampleGrid = parseToGrid(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day15/example.txt").readLines())
+    val exampleGrid = parseToGrid(File("$dataDir/day15/example.txt").readLines())
 
     println("Example part one ${aStar(exampleGrid)}")
     println("Example part two ${aStar(generateFullGrid(exampleGrid))}")
 
-    val inputGrid = parseToGrid(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day15/input.txt").readLines())
+    val inputGrid = parseToGrid(File("$dataDir/day15/input.txt").readLines())
 
     println("Part one ${aStar(inputGrid)}")
     println("Part two ${aStar(generateFullGrid(inputGrid))}")

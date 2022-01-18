@@ -1,6 +1,7 @@
 package day10
 
 import java.io.File
+import dataDir
 
 data class Score(val corrupted: Int, val incomplete: Long)
 
@@ -50,11 +51,11 @@ fun part(data: List<String>): Score {
 }
 
 fun main() {
-    val exampleData = File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day10/example.txt").readLines()
+    val exampleData = File("$dataDir/day10/example.txt").readLines()
     print("Example input ")
     println(part(exampleData))
 
-    val inputData = File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day10/input.txt").readLines()
+    val inputData = File("$dataDir/day10/input.txt").readLines()
     print("Real input ")
     println(part(inputData))
 }

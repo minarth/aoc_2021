@@ -3,6 +3,7 @@ package day19
 import java.io.File
 import java.lang.Integer.max
 import kotlin.math.abs
+import dataDir
 
 data class Point(val x: Int, val y: Int, val z: Int)
 
@@ -165,12 +166,12 @@ fun parts(scanners: MutableMap<Int, MutableList<Point>>): Pair<Int, Int> {
 }
 
 fun main() {
-    var scanners = parse("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day19/example.txt")
+    var scanners = parse("$dataDir/day19/example.txt")
     matchDistances(distances(scanners[0]!!), distances((scanners[1]!!)))
 
     println(parts(scanners))
 
-    scanners = parse("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day19/input.txt")
+    scanners = parse("$dataDir/day19/input.txt")
     println(parts(scanners))
 }
 

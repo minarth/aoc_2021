@@ -3,6 +3,7 @@ package day14
 import java.io.File
 import java.util.Collections.max
 import java.util.Collections.min
+import dataDir
 
 data class Input(val template: List<Char>, val rules: Map<CharPair, Char>)
 data class CharPair(val a: Char, val b: Char)
@@ -95,11 +96,11 @@ fun partTwo(inputData: Input, steps: Int): Long {
 }
 
 fun main() {
-    val exampleData = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day14/example.txt").readLines())
+    val exampleData = parse(File("$dataDir/day14/example.txt").readLines())
     println("Example")
     println("Part one ${partOne(exampleData, 10)}")
 
-    val testData = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day14/input.txt").readLines())
+    val testData = parse(File("$dataDir/day14/input.txt").readLines())
     println("TEST")
     println("Part one ${partOne(testData, 10)}")
 

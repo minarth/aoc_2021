@@ -3,6 +3,7 @@ package day07
 import java.io.File
 import kotlin.math.abs
 import kotlin.math.min
+import dataDir
 
 fun readFileLineByLine(fileName: String)
         = File(fileName).readLines()
@@ -51,7 +52,7 @@ fun main() {
     print("Test two ")
     println(partTwo(parse("16,1,2,0,4,2,7,1,2,14")))
 
-    val positions = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day07/input.txt")[0]
+    val positions = readFileLineByLine("$dataDir/day07/input.txt")[0]
     print("Part one ")
     println(partOne(parse(positions)))
 

@@ -1,6 +1,7 @@
 package day24
 
 import java.io.File
+import dataDir
 
 data class CMD(val cmd: String, val a: String, val b: String?, val c: Int?)
 
@@ -49,10 +50,10 @@ fun evaluate(program: List<CMD>, input: String): MutableMap<String, Int> {
 
 
 fun main() {
-    var program = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day24/example.txt").readLines())
+    var program = parse(File("$dataDir/day24/example.txt").readLines())
     //println(evaluate(program, "31"))
 
-    program = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day24/example2.txt").readLines())
+    program = parse(File("$dataDir/day24/example2.txt").readLines())
     //println(evaluate(program, "9"))
 
     // Eventually solved on paper

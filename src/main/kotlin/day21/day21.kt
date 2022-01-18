@@ -3,6 +3,7 @@ package day21
 import java.io.File
 import java.lang.Integer.min
 import java.math.BigInteger
+import dataDir
 
 class DeterministicDice {
     var value = 1
@@ -93,12 +94,12 @@ fun partTwo(p1: Int, p2: Int): BigInteger {
 
 
 fun main() {
-    val exampleStarts = parse("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day21/example.txt")
+    val exampleStarts = parse("$dataDir/day21/example.txt")
     println("Example part one ${partOne(exampleStarts.first, exampleStarts.second)}")
     println("Example part two ${partTwo(exampleStarts.first, exampleStarts.second)}")
 
 
-    val inputStarts = parse("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day21/input.txt")
+    val inputStarts = parse("$dataDir/day21/input.txt")
     println("Part one ${partOne(inputStarts.first, inputStarts.second)}")
     println("Part two ${partTwo(inputStarts.first, inputStarts.second)}")
 }

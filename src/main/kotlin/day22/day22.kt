@@ -5,6 +5,7 @@ import java.lang.Integer.max
 import java.lang.Integer.min
 import java.lang.Math.abs
 import java.math.BigInteger
+import dataDir
 
 data class CMD(val on: Boolean, val x: IntRange, val y: IntRange, val z: IntRange)
 
@@ -139,20 +140,20 @@ fun partTwo(cmds: List<CMD>): BigInteger {
 }
 
 fun main() {
-    var cmds = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day22/example.txt").readLines())
+    var cmds = parse(File("$dataDir/day22/example.txt").readLines())
     println("Small example part one ${partOne(cmds)}")
     partTwo(cmds)
 
-    cmds = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day22/example2.txt").readLines())
+    cmds = parse(File("$dataDir/day22/example2.txt").readLines())
     println("Large example part one ${partOne(cmds)}")
     println("Large example part two ${partTwo(cmds.subList(0, cmds.size-2))}")
 
-    cmds = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day22/example3.txt").readLines())
+    cmds = parse(File("$dataDir/day22/example3.txt").readLines())
     println("The largest example part one ${partOne(cmds)}")
     println("The largest example part two ${partTwo(cmds)}")
 
 
-    cmds = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day22/input.txt").readLines())
+    cmds = parse(File("$dataDir/day22/input.txt").readLines())
     println("Part one ${partOne(cmds)}")
     println("Part one ${partTwo(cmds)}")
 }

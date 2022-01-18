@@ -4,7 +4,7 @@ import day20.gridToString
 import java.io.File
 import java.lang.Math.abs
 import java.util.*
-
+import dataDir
 
 // amphipods list will contain only the ones, that are not in their proper column
 data class Configuration(val energy: Int, val grid: Array<Array<Char>>) {
@@ -197,11 +197,11 @@ fun partTwo(c: Configuration): Int {
 
 
 fun main() {
-    var amphipods = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day23/example.txt").readLines())
+    var amphipods = parse(File("$dataDir/day23/example.txt").readLines())
     println("Example part one: ${aStar(amphipods)}")
     println("Example part two: ${partTwo(amphipods)}")
 
-    amphipods = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day23/input.txt").readLines())
+    amphipods = parse(File("$dataDir/day23/input.txt").readLines())
     println("Part one: ${aStar(amphipods)}")
     println("Part two: ${partTwo(amphipods)}")
 }

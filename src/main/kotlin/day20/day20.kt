@@ -3,6 +3,7 @@ package day20
 import java.io.File
 import java.lang.Integer.max
 import java.lang.Integer.min
+import dataDir
 
 fun gridToString(grid: Array<Array<Char>>, separator: String = "\t"): String {
     var output = ""
@@ -78,14 +79,14 @@ fun parts(grid: Array<Array<Char>>, translate: String, iterations: Int = 2): Int
 }
 
 fun main() {
-    val exampleInput = File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day20/example.txt").readLines()
+    val exampleInput = File("$dataDir/day20/example.txt").readLines()
     val exampleGrid = parse(exampleInput.subList(2, exampleInput.size))
 
     val translateMap = exampleInput[0]
     println("Example part one ${parts(exampleGrid, translateMap)}")
     println("Example part two ${parts(exampleGrid, translateMap, 50)}")
 
-    val input = File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day20/input.txt").readLines()
+    val input = File("$dataDir/day20/input.txt").readLines()
     val grid = parse(input.subList(2, input.size))
 
     val translate = input[0]

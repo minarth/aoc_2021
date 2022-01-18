@@ -3,6 +3,7 @@
 
 package day02
 
+import dataDir
 import java.io.File
 
 // this is needed so I can return two values from readLines.map
@@ -15,7 +16,7 @@ fun readFileLineByLine(fileName: String)
             Command(cmd, value.toInt())
         }
 fun partOne(): Int {
-    val cmds = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day02/input.txt")
+    val cmds = readFileLineByLine("$dataDir/day02/input.txt")
     var depth: Int = 0
     var horizontal: Int = 0
     for (cmd in cmds) {
@@ -30,7 +31,7 @@ fun partOne(): Int {
 }
 
 fun partTwo(): Int {
-    val cmds = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day02/input.txt")
+    val cmds = readFileLineByLine("$dataDir/day02/input.txt")
     var depth: Int = 0
     var horizontal: Int = 0
     var aim: Int = 0

@@ -2,6 +2,7 @@ package day18
 
 import java.io.File
 import java.lang.Long.max
+import dataDir
 
 // so this is basically unbalanced binary tree with some "weird" operations
 // god I miss python
@@ -291,10 +292,10 @@ fun partTwo(filePath: String): Long {
 }
 
 fun main() {
-    println("Example  one part one ${partOne("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day18/example.txt")}")
-    println("Example  two part one ${partOne("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day18/example2.txt")}")
-    println("Example  two part two ${partTwo("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day18/example2.txt")}")
-    println("Part one ${partOne("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day18/input.txt")}")
-    println("Part two ${partTwo("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day18/input.txt")}")
+    println("Example  one part one ${partOne("$dataDir/day18/example.txt")}")
+    println("Example  two part one ${partOne("$dataDir/day18/example2.txt")}")
+    println("Example  two part two ${partTwo("$dataDir/day18/example2.txt")}")
+    println("Part one ${partOne("$dataDir/day18/input.txt")}")
+    println("Part two ${partTwo("$dataDir/day18/input.txt")}")
 
 }

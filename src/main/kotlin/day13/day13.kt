@@ -2,6 +2,7 @@ package day13
 
 import java.io.File
 import kotlin.math.max
+import dataDir
 
 data class Fold(val coordinates: Int, val xFold: Boolean)
 
@@ -105,11 +106,11 @@ fun partTwo(inputData: Input) {
 }
 
 fun main() {
-    val exampleInput = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day13/example.txt").readLines())
+    val exampleInput = parse(File("$dataDir/day13/example.txt").readLines())
     print("Example input ")
     println(partOne(exampleInput))
 
-    val testInput = parse(File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day13/input.txt").readLines())
+    val testInput = parse(File("$dataDir/day13/input.txt").readLines())
     print("Test input ")
     println(partOne(testInput))
 

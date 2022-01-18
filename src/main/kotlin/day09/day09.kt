@@ -1,6 +1,7 @@
 package day09
 
 import java.io.File
+import dataDir
 
 fun readFileLineByLine(fileName: String)
         = File(fileName).readLines()
@@ -87,14 +88,14 @@ fun partTwo(grid: Array<Array<Int>>): Int {
 
 
 fun main() {
-    val trainGrid = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day09/test.txt")
+    val trainGrid = readFileLineByLine("$dataDir/day09/test.txt")
     print("Test part one ")
     println(partOne(parseToGrid(trainGrid)))
 
     print("Test part two ")
     println(partTwo(parseToGrid(trainGrid)))
 
-    val testGrid = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day09/input.txt")
+    val testGrid = readFileLineByLine("$dataDir/day09/input.txt")
     print("Part one ")
     println(partOne(parseToGrid(testGrid)))
 

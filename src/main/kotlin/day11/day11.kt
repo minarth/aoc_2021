@@ -2,6 +2,7 @@ package day11
 
 import day09.Point
 import java.io.File
+import dataDir
 
 fun parse(input: List<String>): Array<Array<Int>> {
     val grid: Array<Array<Int>> = Array(10) { Array(10) { 0 } }
@@ -82,13 +83,13 @@ fun partTwo(grid: Array<Array<Int>>): Int {
 }
 
 fun main() {
-    val exampleData = File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day11/example.txt").readLines()
+    val exampleData = File("$dataDir/day11/example.txt").readLines()
     print("Example data ")
     println(partOne(parse(exampleData)))
     print("Example part two ")
     println(partTwo(parse(exampleData)))
 
-    val testData = File("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day11/input.txt").readLines()
+    val testData = File("$dataDir/day11/input.txt").readLines()
     print("Part one ")
     println(partOne(parse(testData)))
     print("Part two ")

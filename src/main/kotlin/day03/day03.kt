@@ -1,6 +1,7 @@
 package day03
 
 import java.io.File
+import dataDir
 
 fun readFileLineByLine(fileName: String)
         = File(fileName).readLines()
@@ -95,8 +96,8 @@ private fun <E> List<E>.reduce(operation: (acc: List<Int>, List<Int>) -> Unit) {
 }
 
 fun main() {
-    val trainInput = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day03/test.txt")
-    val testInput = readFileLineByLine("/home/martin/Development/hobby/aoc_2021/src/main/kotlin/day03/input.txt")
+    val trainInput = readFileLineByLine("$dataDir/day03/test.txt")
+    val testInput = readFileLineByLine("$dataDir/day03/input.txt")
     println(partOne(trainInput))
     println(partOne(testInput))
     println(partTwo(trainInput.map { itLine -> itLine.map { it.toString().toInt() } }))
